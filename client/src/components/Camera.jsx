@@ -39,9 +39,14 @@ function Camera() {
     };
 
     async function uploadCameraImage(){
-        const response = await axios.get("http://localhost:5000",{capturedImage})
-        setResponse(response.data);
+        const response = await axios.get("http://localhost:3000",{capturedImage})
+        setResponse(response.data)
     }
+    async function uploadFileImage(){
+        const response = await axios.get("http://localhost:3000",{uploadfile})
+        setResponse(response.data)
+    }
+
 
 
     // Function to take a photo
@@ -74,7 +79,8 @@ function Camera() {
 
             }}>Click an Image</button>
             {modalIsOpen && 
-            <Overlay>
+            <div className='flex flex-col justify-center items-center'>
+            <Overlay/>
             <CustomModal closeModal={closeModal}>
                 <h1 className='text-black text-center mb-1 font-bold'>Click an Image</h1>
                 {!capturedImage &&<video ref={videoRef} autoPlay playsInline></video>}
@@ -86,10 +92,9 @@ function Camera() {
                     {capturedImage &&  <button className="bg-black hover:bg-gray-100 text-white font-semibold py-2 px-4 border border-black rounded shadow-2xl m-1" onClick={closeModal}>OK</button>}
                 </div>
             </CustomModal>
-            </Overlay>}
+            </div>}
             {capturedImage && (<img src={capturedImage} className='h w-96' alt="Captured" />)}
             {uploadfile && (<img src={uploadfile} className='h-96 w-96' alt="Captured" />)}
-             
         <canvas ref={canvasRef} style={{ display: 'none' }}></canvas>
         {capturedImage && <button className="bg-black hover:bg-gray-100 text-white font-semibold py-2 px-4 border border-black rounded shadow-2xl m-1" onClick={uploadCameraImage}>Submit</button>}
         {capturedImage && <button className="bg-black hover:bg-gray-100 text-white font-semibold py-2 px-4 border border-black rounded shadow-2xl m-1" onClick={()=>setCapturedImage(null)}>Delete Image</button>}
