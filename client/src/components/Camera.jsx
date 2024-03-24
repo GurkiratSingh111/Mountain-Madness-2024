@@ -2,6 +2,7 @@ import React, { useRef,useEffect, useState } from 'react';
 import CustomModal from './CustomModal';
 import Overlay from './Overlay';
 function Camera() {
+    
     const videoRef = useRef(null);
     const canvasRef = useRef(null);
     const [capturedImage, setCapturedImage] = useState(null);
