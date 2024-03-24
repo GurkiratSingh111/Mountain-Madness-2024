@@ -38,7 +38,7 @@ Plantify is a web application that uses an AI model to detect the health conditi
 2. Start the frontend development server:
    ```bash
     cd ../frontend
-    npm start
+    npm run dev
 
 3. Open your browser and navigate to http://localhost:5173 to use the application.
 
