@@ -18,7 +18,7 @@ function Navibar() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <div style={{ width: '100%', height: '60vh', overflow: 'hidden' }}>
+      <div style={{ width: '100%', height: '60vh', overflow: 'hidden', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
         <img src={logo} alt="Logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
         <div style={titleStyle}>Plantify</div>
       </div>
@@ -35,24 +35,17 @@ const imageContainerStyle = {
   };
   
   const titleStyle = {
-    position: 'absolute',
     overflow: 'hidden',
-    top: '30%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
+    marginTop: '-30vh',
+    transform: 'translate(0%, -50%)',
     color: 'white',
-    fontSize: '105px',
     fontFamily: 'Arial, sans-serif',
     textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)', 
     textAlign: 'center', 
+    fontSize: '105px',
 
     boxShadow:
     '0 4px 0 rgba(192, 192, 192, 0.5), 0 -4px 0 rgba(192, 192, 192, 0.5), 4px 0 0 rgba(192, 192, 192, 0.5), -4px 0 0 rgba(192, 192, 192, 0.5)',
-
-    '@media (max-width: 768px)': {
-        fontSize: '36px',
-        boxShadow: 'none', 
-    },
   };
 
 export default Navibar;
