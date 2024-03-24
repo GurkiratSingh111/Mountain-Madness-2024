@@ -6,8 +6,8 @@ Plantify is a web application that uses an AI model to detect the health conditi
 
 ## Tech Stack
 
-- **AI Model**: Tensorflow, Keras => Convolutional Neural Networks (CNN)
-- **Backend Logic**: Flask, SQLAlchemy (Python)
+- **AI Model**: Python, Tensorflow, Keras => Convolutional Neural Networks (CNN)
+- **Backend Logic**: Node.js, Express.js
 - **Frontend**: React (JavaScript), Tailwind CSS
 
 ## Features
@@ -40,19 +40,20 @@ Validation Accuracy: 88.33%
 
 2. Install dependencies for frontend:
    ```bash
-   cd ../frontend
+   cd ../client
    npm install
 
 ## Usage
 
 1. Start the backend server:
    ```bash
-    cd ../backend
-    python main.py
+    cd ../backend_express
+    npm install
+   node server.js
 
 2. Start the frontend development server:
    ```bash
-    cd ../frontend
+    cd ../client
     npm run dev
 
 3. Open your browser and navigate to http://localhost:5173 to use the application.
