@@ -43,13 +43,13 @@ Validation Accuracy: 88.33%
 
 1. Start the backend server:
    ```bash
-    cd ../backend_express
+    cd /backend_express
     npm install
     node server.js
 
 2. Start the frontend development server:
    ```bash
-    cd ../client
+    cd /client
     npm install 
     npm run dev
 
