@@ -2,8 +2,7 @@ import React from 'react'
 
 const Overlay = () => {
   return (
-    <div  className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-50" onClick={onClick}/>
-  )
+  <div style={{backgroundColor: 'black',opacity: 0.9,zIndex: 10,width: '100vw',height: '100vh',position: 'fixed', top: '0', left: '0'}} />)
 }
 
 export default Overlay
