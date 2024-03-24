@@ -10,9 +10,9 @@ function Navibar() {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-center">
             <Nav>
-              <Nav.Link href="/">Home</Nav.Link>
-              <Nav.Link href="/about">About</Nav.Link>
-              <Nav.Link href="/examples">Examples</Nav.Link>
+              <Nav.Link href="/" className=' px-5'>Home</Nav.Link>
+              <Nav.Link href="/about" className=' px-5'>About</Nav.Link>
+              <Nav.Link href="/examples" className=' px-5'>Examples</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
