@@ -57,7 +57,7 @@ const AboutPage = () => {
                 <br />
                 BSc. Computer Science and Mathematics
                 <span style={{ float: 'right' }}>
-                  <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.linkedin.com/in/mparsaei/" target="_blank" rel="noopener noreferrer">
                     <FaLinkedin style={{ marginRight: '10px' }} />
                   </a>
                   <a href="https://github.com/M-Parsaei" target="_blank" rel="noopener noreferrer">
@@ -68,11 +68,11 @@ const AboutPage = () => {
 
               {/* Team Member 2 */}
               <ListGroup.Item>
-                <strong>Gurkiat Singh</strong>
+                <strong>Gurkirat Singh Arora</strong>
                 <br />
                 BSc. Computer Science
                 <span style={{ float: 'right' }}>
-                  <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.linkedin.com/in/gurkiratsingharora/" target="_blank" rel="noopener noreferrer">
                     <FaLinkedin style={{ marginRight: '10px' }} />
                   </a>
                   <a href="https://github.com/GurkiratSingh111" target="_blank" rel="noopener noreferrer">
