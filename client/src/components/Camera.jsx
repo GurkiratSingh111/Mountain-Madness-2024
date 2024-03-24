@@ -74,8 +74,7 @@ function Camera() {
 
             }}>Click an Image</button>
             {modalIsOpen && 
-            <div className='flex flex-col justify-center items-center'>
-            <Overlay/>
+            <Overlay>
             <CustomModal closeModal={closeModal}>
                 <h1 className='text-black text-center mb-1 font-bold'>Click an Image</h1>
                 {!capturedImage &&<video ref={videoRef} autoPlay playsInline></video>}
@@ -87,9 +86,10 @@ function Camera() {
                     {capturedImage &&  <button className="bg-black hover:bg-gray-100 text-white font-semibold py-2 px-4 border border-black rounded shadow-2xl m-1" onClick={closeModal}>OK</button>}
                 </div>
             </CustomModal>
-            </div>}
+            </Overlay>}
             {capturedImage && (<img src={capturedImage} className='h w-96' alt="Captured" />)}
             {uploadfile && (<img src={uploadfile} className='h-96 w-96' alt="Captured" />)}
+             
         <canvas ref={canvasRef} style={{ display: 'none' }}></canvas>
         {capturedImage && <button className="bg-black hover:bg-gray-100 text-white font-semibold py-2 px-4 border border-black rounded shadow-2xl m-1" onClick={uploadCameraImage}>Submit</button>}
         {capturedImage && <button className="bg-black hover:bg-gray-100 text-white font-semibold py-2 px-4 border border-black rounded shadow-2xl m-1" onClick={()=>setCapturedImage(null)}>Delete Image</button>}
