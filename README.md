@@ -6,7 +6,7 @@ Plantify is a web application that uses an AI model to detect the health conditi
 
 ## Tech Stack
 
-- **AI Model**: Tensorflow
+- **AI Model**: Tensorflow, Keras => Convolutional Neural Networks (CNN)
 - **Backend Logic**: Flask, SQLAlchemy (Python)
 - **Frontend**: React (JavaScript), Tailwind CSS
 
