@@ -19,7 +19,6 @@ Plantify is a web application that uses an AI model to detect the health conditi
 
 ## Plant Condition Detection Model
 
-# Overview
 The TensorFlow model was designed to accurately classify the condition of plant leaves into one of three categories: Healthy, Powdery, and Rusty. The model utilized a dataset sourced from Kaggle (https://www.kaggle.com/datasets/rashikrahmanpritom/plant-disease-recognition-dataset). The dataset contains 1530 images divided into training, testing, and validation sets, with each set containing images labeled as Healthy, Powdery, or Rust. The model is built using the Keras API in TensorFlow and follows a sequential architecture. It consists of the following layers:
 
 - **Conv2D Layer**: 32 filters, 3x3 kernel size, relu activation
