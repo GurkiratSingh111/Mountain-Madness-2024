@@ -49,7 +49,7 @@ const imageContainerStyle = {
     boxShadow:
     '0 4px 0 rgba(192, 192, 192, 0.5), 0 -4px 0 rgba(192, 192, 192, 0.5), 4px 0 0 rgba(192, 192, 192, 0.5), -4px 0 0 rgba(192, 192, 192, 0.5)',
 
-    '@media (max-width: 768px)': {
+    '@media (maxWidth: 768px)': {
         fontSize: '36px',
         boxShadow: 'none', 
     },
