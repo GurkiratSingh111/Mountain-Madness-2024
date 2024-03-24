@@ -48,8 +48,7 @@ function Camera() {
             <button className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow-2xl m-4" >Upload an Image</button>
             <button className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow-2xl" onClick={openModal}>Click an Image</button>
             {modalIsOpen && 
-            <div className='flex flex-col justify-center items-center'>
-            <Overlay/>
+            <Overlay>
             <CustomModal closeModal={closeModal}>
                 {!capturedImage &&<video ref={videoRef} autoPlay playsInline></video>}
                 <div className='flex flex-row justify-center'>
@@ -60,7 +59,7 @@ function Camera() {
                 {capturedImage && (<img src={capturedImage} className='h w-96' alt="Captured" />
         )}
             </CustomModal>
-            </div>}
+            </Overlay>}
         
         <canvas ref={canvasRef} style={{ display: 'none' }}></canvas>
     </div>
