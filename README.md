@@ -44,6 +44,9 @@ Plantify is a web application that uses an AI model to detect the health conditi
 
 ## Members
 
+- [M Parsaei](https://github.com/M-Parsaei)
+- [Gurkirat Singh](https://github.com/GurkiratSingh111)
+- [Barun Gambhir](https://github.com/barunGambhir)
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
