@@ -13,7 +13,7 @@ function Navibar() {
             <Nav>
               <Nav.Link href="/" className=' px-5'>Home</Nav.Link>
               <Nav.Link href="/about" className=' px-5'>About</Nav.Link>
-              <Nav.Link href="/examples" className=' px-5'>Examples</Nav.Link>
+              <Nav.Link href="/examples" className=' px-5'>Our AI Model</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

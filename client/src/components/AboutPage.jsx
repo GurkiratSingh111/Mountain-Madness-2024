@@ -45,6 +45,15 @@ const AboutPage = () => {
 
         <Card style={cardStyle}>
           <Card.Body>
+            <Card.Title>Why Plantify?</Card.Title>
+            <Card.Text>
+              The plant leaf classification model using Convolutional Neural Networks (CNN) is valuable for agricultural purposes. It aids in early detection and accurate classification of plant diseases, helping farmers take timely action, reduce crop losses, and optimize pesticide usage. This model provides a new perspective by leveraging AI to automate disease identification, enabling more efficient and proactive plant health management.
+            </Card.Text>
+          </Card.Body>
+        </Card>
+
+        <Card style={cardStyle}>
+          <Card.Body>
             <Card.Title>Our Team</Card.Title>
             <Card.Text>
               
