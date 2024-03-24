@@ -5,7 +5,7 @@ import sys
 
 condition = ["Healthy","Powdery","Rusty"]
 
-def predict(image):
+def predictPlant(image):
     model = keras.models.load_model('plant_model.h5')
     #reading the image into a numpy array
     img = cv2.imread(image)
@@ -13,7 +13,7 @@ def predict(image):
     img = img / 255
     img = np.expand_dims(img, axis=0)
     y_predict = model.predict(img)
-    print(condition[np.argmax(y_predict)])
+    return(condition[np.argmax(y_predict)])
 
 
-predict(sys.argv[1])
+predictPlant(sys.argv[1])
