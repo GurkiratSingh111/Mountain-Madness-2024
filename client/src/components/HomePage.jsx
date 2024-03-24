@@ -1,9 +1,13 @@
 import React from 'react'
+import Camera from './Camera'
+import Navbar from "./Navbar"
 
 const HomePage = () => {
   return (
     <div>
-        Homepage
+      <Navbar/>
+        <Camera/>
+
     </div>
   )
 }
