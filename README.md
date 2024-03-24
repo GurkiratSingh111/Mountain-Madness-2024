@@ -6,7 +6,7 @@ Plantify is a web application that uses an AI model to detect the health conditi
 
 ## Tech Stack
 
-- **AI Model**: Python
+- **AI Model**: Tensorflow
 - **Backend Logic**: Flask, SQLAlchemy (Python)
 - **Frontend**: React (JavaScript), Tailwind CSS
 
@@ -16,6 +16,22 @@ Plantify is a web application that uses an AI model to detect the health conditi
 - AI model analyzes the images and provides a report on the plant's condition.
 - User-friendly interface with responsive design using React and Tailwind CSS.
 - Secure and scalable backend powered by Flask and SQLAlchemy.
+
+## Plant Condition Detection Model
+
+# Overview
+The TensorFlow model was designed to accurately classify the condition of plant leaves into one of three categories: Healthy, Powdery, and Rusty. The model utilized a dataset sourced from Kaggle (https://www.kaggle.com/datasets/rashikrahmanpritom/plant-disease-recognition-dataset). The dataset contains 1530 images divided into training, testing, and validation sets, with each set containing images labeled as Healthy, Powdery, or Rust. The model is built using the Keras API in TensorFlow and follows a sequential architecture. It consists of the following layers:
+
+- **Conv2D Layer**: 32 filters, 3x3 kernel size, relu activation
+- **MaxPooling2D Layer**
+- **Conv2D Layer**: 64 filters, 3x3 kernel size
+- **MaxPooling2D Layer**
+- **Flatten Layer**
+- **Dense Layer**: 64 units, relu activation
+- **Dense Layer**: 3 units (one per class), softmax activation
+
+Training Accuracy: 90.02%
+Validation Accuracy: 88.33%
 
 ## Installation
 
