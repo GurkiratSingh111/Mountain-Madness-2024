@@ -10,6 +10,7 @@ function Camera() {
     const [uploadfile, setUploadFile] = useState(null);
     const [modalIsOpen, setIsOpen] = useState(false);
     const handleFileUpload = (event) => {
+        setCapturedImage(null);
         const file = event.target.files[0]; // Assuming single file selection
         if (file) {
           // You may want to perform additional checks on the file here (e.g., size, type)
@@ -32,6 +33,7 @@ function Camera() {
         } catch (error) {
             console.error('Error accessing camera:', error);
         }
+
     };
 
     // Function to take a photo
@@ -46,6 +48,7 @@ function Camera() {
             const dataURL = canvas.toDataURL('image/png');
             setCapturedImage(dataURL);
         }
+        setUploadFile(null);
         
     };
     useEffect(() => {
@@ -57,7 +60,11 @@ function Camera() {
             <input className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow-2xl m-4"  type="file"
         accept="image/*" // Allow only image files
         onChange={handleFileUpload}/>
-            <button className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow-2xl" onClick={openModal}>Click an Image</button>
+            <button className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow-2xl" onClick={()=>{
+                openModal();
+                setCapturedImage(null);
+
+            }}>Click an Image</button>
             {modalIsOpen && 
             <div className='flex flex-col justify-center items-center'>
             <Overlay/>
@@ -78,6 +85,8 @@ function Camera() {
         <canvas ref={canvasRef} style={{ display: 'none' }}></canvas>
         {capturedImage && <button className="bg-black hover:bg-gray-100 text-white font-semibold py-2 px-4 border border-black rounded shadow-2xl m-1" onClick={closeModal}>Submit</button>}
         {capturedImage && <button className="bg-black hover:bg-gray-100 text-white font-semibold py-2 px-4 border border-black rounded shadow-2xl m-1" onClick={()=>setCapturedImage(null)}>Delete Image</button>}
+        {uploadfile && <button className="bg-black hover:bg-gray-100 text-white font-semibold py-2 px-4 border border-black rounded shadow-2xl m-1" onClick={closeModal}>Submit</button>}
+        {uploadfile && <button className="bg-black hover:bg-gray-100 text-white font-semibold py-2 px-4 border border-black rounded shadow-2xl m-1" onClick={()=>setCapturedImage(null)}>Delete Image</button>}
     </div>
     );
 }
