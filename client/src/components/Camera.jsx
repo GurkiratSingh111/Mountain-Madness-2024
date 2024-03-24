@@ -3,10 +3,19 @@ import CustomModal from './CustomModal';
 import Overlay from './Overlay';
 function Camera() {
     
+    
     const videoRef = useRef(null);
     const canvasRef = useRef(null);
     const [capturedImage, setCapturedImage] = useState(null);
+    const [uploadfile, setUploadFile] = useState(null);
     const [modalIsOpen, setIsOpen] = useState(false);
+    const handleFileUpload = (event) => {
+        const file = event.target.files[0]; // Assuming single file selection
+        if (file) {
+          // You may want to perform additional checks on the file here (e.g., size, type)
+          setUploadFile(URL.createObjectURL(file));
+        }
+      };
     function openModal() {
         setIsOpen(true);
       }
@@ -47,7 +56,7 @@ function Camera() {
         <div>
             <input className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow-2xl m-4"  type="file"
         accept="image/*" // Allow only image files
-        onChange={capturedImage}/>
+        onChange={handleFileUpload}/>
             <button className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow-2xl" onClick={openModal}>Click an Image</button>
             {modalIsOpen && 
             <div className='flex flex-col justify-center items-center'>
@@ -64,8 +73,8 @@ function Camera() {
                 </div>
             </CustomModal>
             </div>}
-            {capturedImage && (<img src={capturedImage} className='h w-96' alt="Captured" />
-        )}
+            {capturedImage && (<img src={capturedImage} className='h w-96' alt="Captured" />)}
+            {uploadfile && (<img src={uploadfile} className='h-96 w-96' alt="Captured" />)}
         <canvas ref={canvasRef} style={{ display: 'none' }}></canvas>
         {capturedImage && <button className="bg-black hover:bg-gray-100 text-white font-semibold py-2 px-4 border border-black rounded shadow-2xl m-1" onClick={closeModal}>Submit</button>}
         {capturedImage && <button className="bg-black hover:bg-gray-100 text-white font-semibold py-2 px-4 border border-black rounded shadow-2xl m-1" onClick={()=>setCapturedImage(null)}>Delete Image</button>}
