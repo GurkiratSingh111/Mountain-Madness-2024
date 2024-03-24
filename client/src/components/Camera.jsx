@@ -13,10 +13,9 @@ function Camera() {
     const [response,setResponse] = useState("");
     const handleFileUpload = (event) => {
         setCapturedImage(null);
-        const file = event.target.files[0]; // Assuming single file selection
+        const file = event.target.files[0];
         if (file) {
-          // You may want to perform additional checks on the file here (e.g., size, type)
-          setUploadFile(URL.createObjectURL(file));
+          setUploadFile(file);
         }
       };
     function openModal() {
@@ -39,11 +38,12 @@ function Camera() {
     };
 
     async function uploadCameraImage(){
-        const response = await axios.get("http://localhost:3000",{capturedImage})
+        const response = await axios.post("http://localhost:3000",{image:capturedImage})
         setResponse(response.data)
     }
     async function uploadFileImage(){
-        const response = await axios.get("http://localhost:3000",{uploadfile})
+        console.log("HHHHHHH")
+        const response = await axios.post("http://localhost:3000",{image:uploadfile})
         setResponse(response.data)
     }
 

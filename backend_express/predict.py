@@ -13,7 +13,7 @@ def predictPlant(image):
     img = img / 255
     img = np.expand_dims(img, axis=0)
     y_predict = model.predict(img)
-    return(condition[np.argmax(y_predict)])
+    print(condition[np.argmax(y_predict)])
 
 
 predictPlant(sys.argv[1])
