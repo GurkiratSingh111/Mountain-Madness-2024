@@ -38,10 +38,6 @@ Validation Accuracy: 88.33%
    ```bash
    git clone https://github.com/GurkiratSingh111/Mountain-Madness-2024.git
 
-2. Install dependencies for frontend:
-   ```bash
-   cd ../client
-   npm install
 
 ## Usage
 
@@ -49,11 +45,12 @@ Validation Accuracy: 88.33%
    ```bash
     cd ../backend_express
     npm install
-   node server.js
+    node server.js
 
 2. Start the frontend development server:
    ```bash
     cd ../client
+    npm install 
     npm run dev
 
 3. Open your browser and navigate to http://localhost:5173 to use the application.
